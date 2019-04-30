@@ -5,6 +5,12 @@ body {
   color: $c-black;
 }
 
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 button {
   background: none;
   border: 0;

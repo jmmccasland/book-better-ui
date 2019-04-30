@@ -8,28 +8,15 @@
       </div>
     </div>
 
-    <div class="tours__list">
-      <div class="tours__list__item">
-        <h3 class="title">Moru Spring Tour</h3>
-        <p class="dates">Dates TBD</p>
-        <div class="status-pill">Status</div>
-      </div>
-      <div class="tours__list__item">
-        <h3 class="title">Moru Spring Tour</h3>
-        <p class="dates">Dates TBD</p>
-        <div class="status-pill">Status</div>
-      </div>
-      <div class="tours__list__item">
-        <h3 class="title">Moru Spring Tour</h3>
-        <p class="dates">Dates TBD</p>
-        <div class="status-pill">Status</div>
-      </div>
-      <div class="tours__list__item">
-        <h3 class="title">Moru Spring Tour</h3>
-        <p class="dates">Dates TBD</p>
-        <div class="status-pill">Status</div>
-      </div>
-    </div>
+    <ul class="tours__list">
+      {{#each model as |tour|}}
+        <li class="tours__list__item">
+          <h3 class="title">{{tour.title}}</h3>
+          <p class="dates">Dates TBD</p>
+          <div class="status-pill">Status</div>
+        </li>
+      {{/each}}
+    </ul>
 
   </div>
 </div>
