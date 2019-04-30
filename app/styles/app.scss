@@ -1,0 +1,31 @@
+$c-black: #1b1b21;
+$c-white: #fff;
+
+$f-lg: 24px;
+$f-reg: 20px;
+$f-sm: 18px;
+$f-xs: 14px;
+
+$m-gutter: 20px;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: $c-white;
+  color: $c-black;
+}
+
+.section {
+  padding: $m-gutter
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    margin: 0;
+    font-size: $f-reg;
+    text-transform: lowercase;
+  }
+}
