@@ -1,0 +1,14 @@
+.section--navbar {
+  background: $c-white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    margin: 0;
+    font-size: $f-reg;
+    text-transform: lowercase;
+  }
+}

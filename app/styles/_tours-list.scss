@@ -1,0 +1,55 @@
+.tours {
+  margin-top: 2.5rem;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $m-gutter;
+
+    &__title {
+      margin: 0;
+      font-size: $f-lg;
+    }
+
+    &__button {
+      font-size: $f-xs;
+      color: $c-blue;
+    }
+  }
+
+  &__list {
+    > * + * {
+      margin-top: $m-gutter;
+    }
+
+    &__item {
+      padding: $m-gutter;
+      border: 1px solid $c-border;
+      border-radius: $m-border-radius;
+      background: $c-white;
+
+      .title {
+        margin: 0 0 2px;
+        font-weight: bold;
+        font-size: $f-reg;
+        color: $c-black;
+      }
+
+      .dates {
+        margin: 0 0 $m-gutter;
+        font-weight: bold;
+        font-size: $f-reg;
+        color: $c-disabled;
+      }
+
+      .status-pill {
+        padding: $m-gutter / 2;
+        border-radius: $m-border-radius / 2;
+        color: $c-white;
+        background: $c-blue;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
