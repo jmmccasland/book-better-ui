@@ -4,7 +4,7 @@
     <div class="tours">
       <div class="tours__heading">
         <h2 class="tours__heading__title">Tours</h2>
-        <button class="tours__heading__button">Create New Tour</button>
+        <button class="tours__heading__button" onclick={{action "toggleModal"}}>Create New Tour</button>
       </div>
     </div>
 
@@ -20,3 +20,9 @@
 
   </div>
 </div>
+
+{{#if modalOpen}}
+  {{#ui-modal close=(action "toggleModal")}}
+    Create tour
+  {{/ui-modal}}
+{{/if}}
