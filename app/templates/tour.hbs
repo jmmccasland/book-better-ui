@@ -6,10 +6,10 @@
     </div>
 
     <ul class="tour-sidebar__list">
-      {{#each model as |show|}}
+      {{#each model.shows as |show|}}
         <li class="tour-sidebar__list__item">
           <h3 class="title">{{show.city}}, {{show.state}}</h3>
-          <div class="status-pill">Status</div>
+          <div class="status-pill">{{show.status}}</div>
         </li>
       {{/each}}
     </ul>
