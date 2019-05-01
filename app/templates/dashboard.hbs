@@ -22,7 +22,10 @@
 </div>
 
 {{#if modalOpen}}
-  {{#ui-modal close=(action "toggleModal")}}
-    Create tour
-  {{/ui-modal}}
+  <UiModal @close={{action "toggleModal"}}>
+    <CreateTourForm
+      @submit={{action "createTour"}}
+      @title={{this.title}}
+    />
+  </UiModal>
 {{/if}}
