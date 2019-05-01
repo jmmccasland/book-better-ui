@@ -1,0 +1,21 @@
+{{#if (and this.latitude this.longitude)}}
+  {{#map.source options=(hash
+    type="geojson"
+    data=(hash
+    type="FeatureCollection"
+    features=(array
+      (hash
+        type="Feature"
+        geometry=(hash
+          type="Point"
+          coordinates=(array this.longitude this.latitude)
+        )
+      )
+    )
+  )) as |source|}}
+    {{source.layer layer=(hash
+      type="circle"
+      paint=(hash circle-color="#007cbf" circle-radius=10))
+    }}
+  {{/map.source}}
+{{/if}}

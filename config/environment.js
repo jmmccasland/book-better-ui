@@ -6,6 +6,22 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    'mapbox-gl': {
+      accessToken: "pk.eyJ1Ijoiam1tY2Nhc2xhbmQiLCJhIjoiY2pvMHQyNXFvMDRiajN2bm4xM251eTQ5OCJ9.WGlRWkIaHSs9dzHhr3uYkw",
+      map: {
+        minZoom: 2,
+        maxZoom: 14,
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 4,
+        center: [ -96.7969879, 32.7766642 ]
+      },
+      marker: {
+        offset: [ -1, -1 ]
+      },
+      popup: {
+        offset: [ 0, -10 ]
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

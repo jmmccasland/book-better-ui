@@ -19,6 +19,10 @@
     </div>
   </div>
 
-  <div class="tour__map"></div>
+  {{#mapbox-gl class="tour__map" as |map|}}
+    {{#each model.shows as |show|}}
+      {{map-marker map=map city=show.city state=show.state country=show.country}}
+    {{/each}}
+  {{/mapbox-gl}}
 </div>
 
