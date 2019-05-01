@@ -11,9 +11,11 @@
     <ul class="tours__list">
       {{#each model as |tour|}}
         <li class="tours__list__item">
-          <h3 class="title">{{tour.title}}</h3>
-          <p class="dates">Dates TBD</p>
-          <div class="status-pill">Status</div>
+          {{#link-to "tour" tour.id}}
+            <h3 class="title">{{tour.title}}</h3>
+            <p class="dates">Dates TBD</p>
+            <div class="status-pill">Status</div>
+          {{/link-to}}
         </li>
       {{/each}}
     </ul>
