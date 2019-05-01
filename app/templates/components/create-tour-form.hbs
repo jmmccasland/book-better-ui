@@ -1,8 +1,8 @@
-<form onsubmit={{this.submit}}>
-  <h2>Create Tour</h2>
-  <label>
-    Tour Name:
-    {{input type="text" value=this.title}}
-  </label>
-  <button type="submit">Submit</button>
+<form class="create-tour-form" onsubmit={{this.submit}}>
+  <h2 class="create-tour-form__title">Create Tour</h2>
+  <div class="form-control">
+    <label class="label">Tour Name</label>
+    {{input class="input" type="text" value=this.title}}
+  </div>
+  <button class="btn btn--submit" type="submit">Submit</button>
 </form>

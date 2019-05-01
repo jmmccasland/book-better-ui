@@ -1,0 +1,42 @@
+.form-control {
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: $f-sm;
+    font-weight: bold;
+  }
+
+  .input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $c-border;
+    border-radius: $m-border-radius;
+    font-size: $f-xs;
+  }
+}
+
+.btn {
+  padding: 12px;
+  border-radius: $m-border-radius / 2;
+  font-size: $f-xs;
+  font-weight: bold;
+
+  &--submit {
+    width: 100%;
+    margin-top: $m-gutter;
+    background: $c-blue;
+    color: $c-white;
+  }
+}
+
+.create-tour-form {
+  max-width: 21rem;
+  margin: 0 auto;
+
+  &__title {
+    margin: 0 0 $m-gutter;
+    font-size: $f-lg;
+    text-align: center;
+  }
+}
