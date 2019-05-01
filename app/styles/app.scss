@@ -4,16 +4,23 @@ $c-silver: #f8f8f8;
 $c-blue: #4e6ffb;
 $c-disabled: #d0d0d9;
 $c-border: #ececec;
+$c-overlay: rgba(27,27,33,0.50);
 
 $f-lg: 24px;
 $f-reg: 20px;
 $f-sm: 18px;
 $f-xs: 14px;
 
+$e-modal: 9992;
+$e-overlay: 9991;
+
+$m-max-width: 44rem;
 $m-gutter: 20px;
 $m-border-radius: 8px;
 
+@import "box-sizing";
 @import "resets";
 @import "layout";
 @import "navbar";
 @import "tours-list";
+@import "ui-modal";
