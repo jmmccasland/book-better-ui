@@ -10,8 +10,9 @@ export default Controller.extend({
       let self = this;
       this.store.findRecord('show', this.model.id, {backgroundReload: false})
         .then(function(show) {
-          show.destroyRecord();
-          self.transitionToRoute('tour', tourId)
+          show.destroyRecord().then(() => {
+            self.transitionToRoute('tour', tourId)
+          });
         });
     }
   }
