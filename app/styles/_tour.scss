@@ -12,6 +12,9 @@
 
   &__heading {
     margin-bottom: $m-gutter;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
     .title {
       margin: 0 0 5px;

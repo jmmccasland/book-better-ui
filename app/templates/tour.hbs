@@ -1,15 +1,18 @@
 <div class="tour">
   <div class="tour-sidebar">
     <div class="tour-sidebar__heading">
-      <h2 class="title">{{model.title}}</h2>
-      <p class="dates">Dates TBD</p>
-
-      <form onsubmit={{action "createShow"}}>
-        <div class="form-control">
-          {{input class="input search-input" value=this.city type="text" placeholder="Search for city or venue"}}
-        </div>
-      </form>
+      <div>
+        <h2 class="title">{{this.model.title}}</h2>
+        <p class="dates">Dates TBD</p>
+      </div>
+      {{#link-to "tour.settings" this.model.id class="link"}}Settings{{/link-to}}
     </div>
+
+    <form onsubmit={{action "createShow"}}>
+      <div class="form-control">
+        {{input class="input search-input" value=this.city type="text" placeholder="Search for city or venue"}}
+      </div>
+    </form>
 
     <ul class="tour-sidebar__list">
       {{#each model.shows as |show|}}

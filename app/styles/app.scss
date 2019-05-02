@@ -30,6 +30,10 @@ $m-border-radius: 8px;
 // Pages
 @import "tour";
 
+.link {
+  color: $c-blue;
+}
+
 .btn {
   &--danger {
     color: $c-white;
@@ -79,5 +83,5 @@ $m-border-radius: 8px;
 
 
 .search-input {
-  margin-top: $m-gutter;
+  margin-bottom: $m-gutter;
 }

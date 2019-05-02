@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('tour', { path: '/tour/:id'}, function() {
     this.route('show', { path: '/show/:show_id'});
+    this.route('settings');
   });
 });
 
