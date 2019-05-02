@@ -1,0 +1,13 @@
+<UiModal @close={{action "transitionToTour" this.model.tour.id}}>
+  <div class="show-form">
+    <div class="show-form__heading">
+      <div>
+        <h3 class="title">{{this.model.city}}, {{this.model.state}} <br> {{this.model.country}}</h3>
+        <p class="dates">Dates TBD</p>
+      </div>
+      <div class="status-pill">
+        {{this.model.status}}
+      </div>
+    </div>
+  </div>
+</UiModal>

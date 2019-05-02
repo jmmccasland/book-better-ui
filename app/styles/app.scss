@@ -28,3 +28,43 @@ $m-border-radius: 8px;
 
 // Pages
 @import "tour";
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9997;
+}
+
+.show-form {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $m-gutter;
+
+    .title {
+      margin: 0 0 5px;
+      font-size: $f-lg;
+      font-weight: bold;
+    }
+
+    .dates {
+      margin: 0;
+      font-size: $f-reg;
+      font-weight: bold;
+      color: $c-disabled;
+    }
+
+    .status-pill {
+      width: 200px;
+      padding: $m-gutter / 2;
+      border-radius: $m-border-radius / 2;
+      color: $c-white;
+      background: $c-blue;
+      text-align: center;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}

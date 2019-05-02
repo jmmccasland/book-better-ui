@@ -8,8 +8,10 @@
     <ul class="tour-sidebar__list">
       {{#each model.shows as |show|}}
         <li class="tour-sidebar__list__item">
-          <h3 class="title">{{show.city}}, {{show.state}}</h3>
-          <div class="status-pill">{{show.status}}</div>
+          {{#link-to "tour.show" show.id}}
+            <h3 class="title">{{show.city}}, {{show.state}}</h3>
+            <div class="status-pill">{{show.status}}</div>
+          {{/link-to}}
         </li>
       {{/each}}
     </ul>
@@ -25,4 +27,9 @@
     {{/each}}
   {{/mapbox-gl}}
 </div>
+
+<div class="cover">
+  {{outlet}}
+</div>
+
 
