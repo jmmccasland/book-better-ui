@@ -2,6 +2,7 @@ $c-black: #1b1b21;
 $c-white: #fff;
 $c-silver: #f8f8f8;
 $c-blue: #4e6ffb;
+$c-red: #df3b00;
 $c-disabled: #d0d0d9;
 $c-border: #ececec;
 $c-overlay: rgba(27,27,33,0.50);
@@ -28,6 +29,13 @@ $m-border-radius: 8px;
 
 // Pages
 @import "tour";
+
+.btn {
+  &--danger {
+    color: $c-white;
+    background: $c-red;
+  }
+}
 
 .cover {
   position: fixed;
