@@ -47,6 +47,10 @@
         margin: 0 0 $m-gutter;
         font-size: $f-reg;
         font-weight: bold;
+
+        &:hover {
+          color: $c-blue;
+        }
       }
 
       .status-pill {

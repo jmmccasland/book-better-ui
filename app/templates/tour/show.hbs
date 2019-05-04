@@ -1,17 +1,73 @@
 <UiModal @close={{action "transitionToTour" this.model.tour.id}}>
-  <div class="show-form">
-    <div class="show-form__heading">
+  <div class="show-detail">
+    <div class="show-detail__info">
       <div>
         <h3 class="title">{{this.model.city}}, {{this.model.state}} <br> {{this.model.country}}</h3>
-        <p class="dates">Dates TBD</p>
+        <p class="dates">
+          {{#if this.date}}
+            {{this.date}}
+          {{else}}
+            Dates TBD
+          {{/if}}
+        </p>
       </div>
       <div class="status-pill">
         {{this.model.status}}
       </div>
     </div>
 
-    <div class="form-control">
-      <button class="btn btn--danger" onclick={{action "deleteShow" this.model.tour.id}}>Delete Show</button>
+    <div class="show-detail__heading">
+      <h4 class="subtitle">Show Details</h4>
+      <button class="link">Edit</button>
     </div>
+
+    <div class="show-detail__form">
+      <FormInput
+        @label="Date"
+        @placeholder="Select a date"
+        @value={{this.date}}
+        @type="date"
+      />
+      <FormInput
+        @label="Venue"
+        @placeholder="Enter venue name"
+        @value={{this.venue}}
+        @type="text"
+      />
+      <FormInput
+        @label="Time"
+        @placeholder="Select a time"
+        @value={{this.time}}
+        @type="text"
+      />
+      <FormInput
+        @label="Address"
+        @placeholder="Enter venue address"
+        @value={{this.address}}
+        @type="text"
+      />
+      <FormInput
+        @label="City"
+        @placeholder="Enter venue city"
+        @value={{this.city}}
+        @type="text"
+      />
+      <FormInput
+        @label="State"
+        @placeholder="Enter venue state"
+        @value={{this.state}}
+        @type="text"
+      />
+    </div>
+
+    <div class="show-detail__controls">
+      <div class="form-control">
+        <button class="btn btn--danger" onclick={{action "deleteShow" this.model.tour.id}}>Delete</button>
+      </div>
+      <div class="form-control">
+        <button class="btn btn--submit" onclick={{action "updateShow" this.model.tour.id}}>Update</button>
+      </div>
+    </div>
+
   </div>
 </UiModal>

@@ -5,5 +5,5 @@ export default Model.extend({
   city: attr(),
   state: attr(),
   status: attr(),
-  tour: belongsTo()
+  tour: belongsTo('tour')
 });

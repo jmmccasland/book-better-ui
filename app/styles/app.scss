@@ -26,6 +26,7 @@ $m-border-radius: 8px;
 @import "tours-list";
 @import "ui-modal";
 @import "forms";
+@import "components/form-input";
 
 // Pages
 @import "tour";
@@ -35,10 +36,18 @@ $m-border-radius: 8px;
 }
 
 .btn {
+  opacity: 0.5;
+  transition: opacity 0.1s;
+
   &--danger {
     color: $c-white;
     background: $c-red;
   }
+
+  &:hover {
+    opacity: 1;
+  }
+
 }
 
 .cover {
@@ -48,8 +57,8 @@ $m-border-radius: 8px;
   z-index: 9997;
 }
 
-.show-form {
-  &__heading {
+.show-detail {
+  &__info {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -78,6 +87,43 @@ $m-border-radius: 8px;
       font-weight: bold;
       text-transform: capitalize;
     }
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -20px;
+    padding: ($m-gutter / 2) $m-gutter;
+    border-top: 1px solid $c-border;
+    border-bottom: 1px solid $c-border;
+
+    .subtitle {
+      margin: 0;
+      font-size: $f-sm;
+    }
+
+    .link {
+      font-size: $f-xs;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $m-gutter;
+
+    > * {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }
 

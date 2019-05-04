@@ -3,5 +3,5 @@ const { Model, attr, hasMany} = DS;
 
 export default Model.extend({
   title: attr(),
-  shows: hasMany()
+  shows: hasMany('show')
 });
