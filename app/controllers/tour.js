@@ -13,7 +13,7 @@ export default Controller.extend({
     createShow(ev) {
       ev.preventDefault();
 
-      const tour = this.model;
+      const tour = this.store.peekRecord('tour', this.model.id);
 
       const show = this.store.createRecord('show', {
         city: this.city,
